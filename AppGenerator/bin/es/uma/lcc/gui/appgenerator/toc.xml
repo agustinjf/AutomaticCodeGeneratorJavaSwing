@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<toc version="1.0"> <!--  categoryclosedimage="FolderClosed" categoryopenimage="FolderOpened"
+topicimage="ItemIco"-->
+        <tocitem text="AppGenerator"    			target="aplicacion">
+           <tocitem text="Menú"    					target="menu"/>
+           <tocitem text="Panel de Datos Generales"	target="generalData"/>
+           <tocitem text="Panel de atributos"    	target="attributeData"/>
+           <tocitem text="Panel de Configuración"  	target="configurationData"/>
+           <tocitem text="Generación"    			target="generation"/>
+        </tocitem>
+</toc>

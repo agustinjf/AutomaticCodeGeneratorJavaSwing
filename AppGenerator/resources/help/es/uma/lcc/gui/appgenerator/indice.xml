@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE index
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/index_1_0.dtd">
+<index version="1.0">
+        <indexitem text="AppGenerator"    			target="aplicacion"/>
+        <indexitem text="Menú"    					target="menu"/>
+        <indexitem text="Panel de Datos generales"	target="generalData"/>
+        <indexitem text="Panel de atributos"    	target="attributeData"/>
+        <indexitem text="Panel de configuración"    target="configurationData"/>
+        <indexitem text="Generación"    			target="generation"/>
+</index>

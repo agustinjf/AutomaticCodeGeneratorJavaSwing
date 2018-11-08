@@ -1,0 +1,29 @@
+<project name="Server_Interface" default="-post-jar">
+
+	<property name="source.dir" value="main/java" />
+	<property name="distribution.dir" value="build/jar" />
+
+	<target name="clean">
+		<delete dir="build" />
+	</target>
+
+	<target name="compile" depends="clean">
+		<mkdir dir="build/classes" />
+		<javac srcdir="main/java" destdir="build/classes" />
+	</target>
+
+	<target name="jar" depends="compile">
+		<mkdir dir="build/jar" />
+		<jar destfile="build/jar/Server_Interface.jar" basedir="build/classes">
+			<fileset dir="${source.dir}" includes="**/*.java"/>
+		</jar>
+	</target>
+
+	<target name="-post-jar" depends="jar">
+	</target>
+
+	<target name="run" depends="jar">
+		<java jar="build/jar/Server_Interface.jar" fork="true" />
+	</target>
+
+</project>

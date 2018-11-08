@@ -1,0 +1,61 @@
+<project name="Client" default="compile">
+
+	<property name="lib.dir" value="lib" />
+	<!--<property name="resources.dir" value="resources" />-->
+	<property name="source.dir" value="main/java" />
+	<property name="main-class" value="es.uma.lcc.gui.template._Client" />
+	<property name="distribution.dir" value="build/jar" />
+	<property name="java.encoding" value="utf8" />
+
+	<path id="classpath">
+		<fileset dir="${lib.dir}" includes="**/*.jar" />
+	</path>
+
+	<target name="clean">
+		<delete dir="build" />
+	</target>
+
+	<target name="compile" depends="clean">
+		<mkdir dir="build/classes" />
+		<javac encoding="${java.encoding}" srcdir="main/java" destdir="build/classes" classpathref="classpath" />
+	</target>
+
+	<target name="jar" depends="compile">
+		<mkdir dir="build/jar" />
+		<jar destfile="build/jar/Client.jar" basedir="build/classes">
+			<manifest>
+				<attribute name="Main-Class" value="${main-class}" />
+				<attribute name="Class-Path" value="lib/Server_Interface.jar lib/substance-6.1.jar" />
+			</manifest>
+			<fileset dir="${source.dir}" includes="**/*.properties" />
+			<fileset dir="${source.dir}" includes="**/*.java"/>
+		</jar>
+		<!--<mkdir dir="${distribution.dir}/resources" />-->
+		<mkdir dir="${distribution.dir}/lib" />
+		<!--<copy todir="${distribution.dir}/resources">
+			<fileset dir="${resources.dir}" />
+		</copy>-->
+		<copy todir="${distribution.dir}/lib">
+			<fileset dir="${lib.dir}" />
+		</copy>
+	</target>
+
+	<target name="-post-jar" depends="jar">
+	</target>
+
+	<!--Distribuir-->
+	<target name="distribuite" depends="jar">
+		<jar destfile="${distribution.dir}/Server.jar">
+		</jar>
+	</target>
+
+	<target name="run" depends="jar">
+		<java fork="true" classname="${main-class}">
+			<classpath>
+				<path refid="classpath" />
+				<path location="build/jar/Client.jar" />
+			</classpath>
+		</java>
+	</target>
+
+</project>
