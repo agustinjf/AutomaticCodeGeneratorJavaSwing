@@ -1,0 +1,24 @@
+This is an Automatic Code/Application Generator in Java Swing.
+
+The generated application will use 'automaticServer' as host to know where is the server.
+The comunication between Client and Server is with 'RMI'
+
+* Possible problems:
+Can not find javac when the application is compiling the automatic code
+ - Copy the 'tools.jar' lib from jdk to jre 
+  -- in mac .../lib/ext
+
+This project is an evolution of the 'FPG (Final Project Grade)'
+
+What I'm going to do/improve
+ - Improve the code templates
+  -- Remove writed code from java aplication to only use templates
+ - Manage modules that already exists (backups or generated modules)
+ - Add others gui's
+  -- List, Create, Edit, Consult
+  -- Consult, Edit
+ - Generate a dummy application in which load the generated modules (applications)
+ - Configure to select which modules load in the application and which of them will be visibles.
+  -- TODO explain in the future...
+ - Manage differents types of data connection in the server (Redis, XML, Oracle, MySQL, etc).
+
