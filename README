@@ -3,12 +3,12 @@ This is an Automatic Code/Application Generator in Java Swing.
 The generated application will use 'automaticServer' as host to know where is the server.
 The comunication between Client and Server is with 'RMI'
 
+This project is an evolution of the 'FPG (Final Project Grade)'
+
 * Possible problems:
 Can not find javac when the application is compiling the automatic code
  - Copy the 'tools.jar' lib from jdk to jre 
   -- in mac .../lib/ext
-
-This project is an evolution of the 'FPG (Final Project Grade)'
 
 What I'm going to do/improve
  - Improve the code templates
