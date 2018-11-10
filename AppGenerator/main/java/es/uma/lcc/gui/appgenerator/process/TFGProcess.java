@@ -52,7 +52,7 @@ public class TFGProcess {
 	 */
 	public TFGProcess(ResourceManager resourceManager) {
 		this.resourceManager = resourceManager;
-		this.glassPanel = new GlassPanel();
+		this.glassPanel = new GlassPanel("", 14, 0.70f, 15.0f, 300);
 	}
 
 	/**

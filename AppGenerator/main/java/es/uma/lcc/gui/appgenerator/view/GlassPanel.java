@@ -38,54 +38,6 @@ public class GlassPanel extends JComponent implements MouseListener {
 
 	protected RenderingHints hints = null;
 
-	/**
-	 * Constructor
-	 */
-	public GlassPanel() {
-		this("");
-	}
-
-	/**
-	 * Constructor
-	 *
-	 * @param text
-	 */
-	public GlassPanel(String text) {
-		this(text, 14);
-	}
-
-	/**
-	 * Constructor
-	 *
-	 * @param text
-	 * @param barsCount
-	 */
-	public GlassPanel(String text, int barsCount) {
-		this(text, barsCount, 0.70f);
-	}
-
-	/**
-	 * Constructor
-	 *
-	 * @param text
-	 * @param barsCount
-	 * @param shield
-	 */
-	public GlassPanel(String text, int barsCount, float shield) {
-		this(text, barsCount, shield, 15.0f);
-	}
-
-	/**
-	 * Constructor
-	 *
-	 * @param text
-	 * @param barsCount
-	 * @param shield
-	 * @param fps
-	 */
-	public GlassPanel(String text, int barsCount, float shield, float fps) {
-		this(text, barsCount, shield, fps, 300);
-	}
 
 	/**
 	 * Constructor
